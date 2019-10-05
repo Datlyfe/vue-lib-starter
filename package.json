@@ -1,0 +1,28 @@
+{
+  "name": "@datlyfe/vue-lib",
+  "version": "1.0.0",
+  "license": "ISC",
+  "main": "dist/vue-lib.cjs.js",
+  "module": "dist/vue-lib.esm.js",
+  "browser": "dist/vue-lib.umd.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "version": "npm run build && git add -A",
+    "postversion": "git push -u --follow-tags origin master && npm publish"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "dayjs": "^1.8.16"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "rollup": "^1.9.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  }
+}
